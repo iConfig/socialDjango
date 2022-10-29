@@ -1,0 +1,167 @@
+h2 {
+    color: white;
+}
+
+html{
+    background-color: rgb(9, 13, 33);
+}
+
+#header{
+    width: 99%;
+    /* margin: 5px; */
+    padding: 5px;
+    height: 80px;
+    /* background-color: rgb(76, 76, 201); */
+    background-color: rgb(4, 41, 86);
+    border-radius: 8px;
+}
+#profile{
+    background-color: black;
+    padding: 3px;
+    border: transparent;
+}
+#profile a{
+    color: rgb(234, 232, 232);
+    text-decoration: none;
+    
+}
+
+#logout-text{
+    float: right;
+    margin-top: -43px;
+    font-size: 18px;
+    padding: 3px;
+    background-color: black;
+    border: transparent;
+}
+#logout-text a{
+    color: white;
+    text-decoration: none;
+}
+#signup-text{
+    float: right;
+    margin-top: -43px;
+    font-size: 15px;
+    padding: 2px;
+    background-color: black;
+    /* border: white; */
+}
+#login-text{
+    float: right;
+    margin-right: 80px ;
+    margin-top: -43px;
+    font-size: 15px;
+    padding: 2px;
+    background-color: black;
+    /* border: transparent; */
+}
+#signup-text a,#login-text a{
+    color: white;
+    text-decoration: none;
+}
+#form-error{
+    color:red;
+    font-style: italic;
+    /* width: 50%; */
+    /* padding: 3px; */
+    /* margin: 3px; */
+    /* text-align: center; */
+}
+#post-container{
+    margin: auto;
+    padding: 8px;
+    width: 40%;
+    height: auto;
+    /* background-color: rgb(76, 76, 201); */
+    border-radius: 8px;
+}
+#edit-container{
+    margin: auto;
+    padding: 8px;
+    width: 50%;
+    height: auto;
+    background-color: white;
+    border-radius: 8px;
+}
+#edit-form{
+    margin: auto;
+    padding: 10px;
+    width: 90%;
+    /* background-color: azure; */
+}
+label{
+    color: black;
+}
+h4{
+    color: white;
+}
+
+#id_username,#id_email,#id_first_name,#id_last_name,#id_location,#id_bio{
+    padding: 6px;
+    /* margin: 5px; */
+    width: 100%;
+}
+
+h2{
+    text-align: center;
+    color: white;
+}
+
+form{
+    margin: auto;
+    padding: 10px;
+    width: 90%;
+    /* background-color: azure; */
+}
+#post-form{
+    margin: auto;
+    padding: 10px;
+    width: 90%;
+    /* background-color: azure; */
+}
+
+#div-title,#div-content,#div-hide{
+    padding: 6px;
+    margin: 5px;
+    width: 100%;
+}
+
+#label-title,#label-content,#label-hide{
+   font-style: italic;
+   color: white;
+}
+
+#id_title,#hide{
+    width: 90%;
+    padding: 4px;
+    border: transparent;
+}
+#id_content{
+    width: 90%;
+    padding: 4px;
+    height: 500px;
+    border: transparent;
+}
+
+#helptext{
+    color: aliceblue;
+}
+#submit-div{
+    margin: auto;
+    width: 40%;
+    /* background-color: aqua; */
+    text-align: center;
+
+}
+#id_submit{
+    margin: auto;
+    width: 50%;
+    padding: 6px;
+    margin: 3px;
+    border: transparent;
+    color: black;
+}
+
+#post-text{
+    text-align: center;
+}

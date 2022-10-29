@@ -1,0 +1,80 @@
+html{
+    background-color: rgb(9, 13, 33);
+}
+
+h2 {
+    color: rgb(12, 12, 12);
+}
+
+#form-error{
+    color:red;
+    font-style: italic;
+}
+#signup-container{
+    margin: auto;
+    padding: 8px;
+    width: 40%;
+    height: auto;
+    background-color: white;
+    border-radius: 8px;
+}
+h2{
+    text-align: center;
+}
+
+form{
+    margin: auto;
+    padding: 10px;
+    width: 90%;
+    /* background-color: azure; */
+}
+#signup-form{
+    margin: auto;
+    padding: 10px;
+    width: 90%;
+    /* background-color: azure; */
+}
+
+#div-user,#div-email,#div-pass1,#div-pass2{
+    padding: 6px;
+    margin: 5px;
+    width: 100%;
+}
+
+#label-user,#div-email,#label-pass1,#label-pass2{
+   font-style: italic;
+   color: black;
+}
+
+#id_username,#id_email,#id_password1,#id_password2{
+    width: 90%;
+    padding: 4px;
+    border: 1px solid rgb(4, 4, 68);
+}
+
+#helptext{
+    color: rgb(54, 2, 2);
+}
+#submit-div{
+    margin: auto;
+    width: 40%;
+    /* background-color: aqua; */
+    text-align: center;
+
+}
+#id_submit{
+    margin: auto;
+    width: 50%;
+    padding: 6px;
+    margin: 3px;
+    border: transparent;
+    color: black;
+}
+
+#signup-text{
+    text-align: center;
+}
+
+#signup-text a{
+    color: rgb(120, 6, 6);
+}

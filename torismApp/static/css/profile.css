@@ -1,0 +1,231 @@
+#header{
+    width: 99%;
+    /* margin: 5px; */
+    padding: 5px;
+    height: 80px;
+    /* background-color: rgb(76, 76, 201); */
+    background-color: rgb(4, 41, 86);
+    border-radius: 8px;
+}
+html{
+    background-color: rgb(9, 13, 33);
+}
+
+#profile{
+    background-color: black;
+    padding: 3px;
+    border: transparent;
+}
+#profile a{
+    color: rgb(234, 232, 232);
+    text-decoration: none;
+    
+}
+
+#new-post{
+    margin-left: 10px;
+    padding: 5px;
+    background-color: rgb(234, 234, 243);
+    border: transparent;
+    float: left;
+    
+}
+
+#new-post a{
+    color: rgb(15, 14, 14);
+    text-decoration: none;
+}
+#logout-text{
+    float: right;
+    margin-top: -43px;
+    font-size: 18px;
+    padding: 3px;
+    background-color: black;
+    border: transparent;
+}
+#post_edit{
+    float:right;
+    margin-top: -25px;
+    margin-right: 10px;
+    /* height: 12px; */
+    background-color: rgb(117, 142, 172);
+    color: white;
+    border: transparent;
+}
+
+
+#post_delete{
+    float:left;
+    margin-top: -25px;
+    margin-left: 10px;
+    /* height: 12px; */
+    background-color: red;
+    color: white;
+    border: transparent;
+}
+
+#post_edit a, #post_delete a{
+    text-decoration: none;
+    color: white;
+
+}
+#profile-pics{
+    width: 60px;
+    height: 60px;
+}
+h4{
+    color: white;
+}
+p{
+    margin: 3px;
+    padding: 3px;
+}
+#logout-text{
+    float: right;
+    margin-top: -43px;
+    font-size: 18px;
+    padding: 2px;
+}
+#logout-text a{
+    color: white;
+    text-decoration: none;
+}
+#signup-text{
+    float: right;
+    margin-top: -43px;
+    font-size: 16px;
+    padding: 2px;
+}
+#login-text{
+    float: right;
+    margin-right: 80px ;
+    margin-top: -43px;
+    font-size: 16px;
+    padding: 2px;
+}
+#signup-text a,#login-text a{
+    color: white;
+    text-decoration: none;
+}
+#page-container{
+    width: 80%;
+    margin: auto;
+    margin-top:20px;
+    padding: 10px;
+    background-color: rgb(10, 49, 49);
+    border-radius: 10px;
+    background-color: white;
+    /* border: 1px solid rgb(76, 76, 201); */
+    text-align: justify;
+    
+
+}
+#info{
+    width: 80%;
+    margin: auto;
+    margin-top:20px;
+    padding: 10px;
+    background-color: rgb(10, 49, 49);
+    border-radius: 10px;
+    background-color: white;
+    /* border: 1px solid rgb(76, 76, 201); */
+    text-align: justify;
+    height: auto;
+
+}
+#info #user-info span{
+    margin: 6px;
+    margin-right: 130px;
+}
+#post-list{
+    width:90%;
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+    word-wrap: break-word;
+    /* padding: 10px; */
+    /* border: 1px solid black; */
+    height: 300px;
+    /* background-color: aqua; */
+    vertical-align: middle;
+    /* color: white; */
+
+}
+#post-list  a{
+    color: rgb(4, 48, 181);
+    float: left;
+    text-decoration: none;
+}
+
+#post-list button a{
+    color: white;
+    float: left;
+}
+
+#post-list button{
+    background-color: rgb(4, 41, 86);
+}
+
+#profile-pic{
+    width:250px;
+    height: 400px;
+    margin: 2px;
+    padding: 2px;
+ 
+}
+#user-postdiv p{
+    margin: 2px;
+    padding: 2px;
+    text-align: justify;
+    float: right;
+    
+}
+#user-info{
+    float: right;
+    margin-top: 120px;
+}
+#username{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#post-detail{
+    width: 100%;
+    /* height: 100px; */
+    /* padding: 3px; */
+    margin: 3px;
+    border-radius: 20px; 
+    border: 1px solid rgb(11, 11, 121);
+}
+#post-detail a{
+    text-decoration: none;
+}
+#post-content{
+    padding: 2px;
+    margin: 6px;
+    text-align: justify;
+    color: black;
+    word-wrap: break-word;
+}
+#post-content a {
+    color: black;
+    text-decoration: none;
+}
+#post-image{
+    padding: 2px;
+    margin: 2px;
+    text-align: justify;
+}
+#post-image img{
+    width: 90%;
+    padding: 3px;
+    margin: 3px;
+}
+ 
+ 
+
+
+
+
+
+
+
+

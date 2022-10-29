@@ -1,0 +1,59 @@
+<html>
+
+{% block content%}
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+</head>
+<body>
+<div id="signup-container">
+<h2>Sign Up</h2>
+{% if messages %}
+{% for message in messages %}
+{% if message.tag == "success" %}
+<span id="msg-success" >{{message}}</span>
+{% else %}  
+<span id="msg-error" >{{message}}</span>
+{% endif %}
+{% endfor %}
+{% endif %}
+{{error}}
+<form method="POST">
+    {% csrf_token %}
+    <div id="signup-form">
+        {{form.non_feild_errors}}
+        <span id="form-error">{{form.username.errors}}</span>
+        <div id="div-user">
+            <label for="username" id="label-user">Username:</label><br>
+            <input type="text" name="username" maxlength="25"  required id="id_username"><br>
+            <span id="helptext">Required. 25 characters or fewer. Letters, digits and @/./+/-/_ only</span>
+        </div>
+        <span id="form-error">{{form.email.errors}}</span>
+        <div id="div-email">
+            <label for="email" id="label-email">Email:</label><br>
+            <input type="email" name="email" required id="id_email"><br>
+            <span id="helptext">Required. Enter a valid email</span>
+        </div>
+        <span id="form-error">{{form.password2.errors}}</span>
+        <div id="div-pass1">
+            <label for="pass1" id="label-pass1">Password:</label><br>
+            <input type="password" name="password1" required id="id_password1"><br>
+            <span id="helptext">Your password can't be too similar to your personal information</span><br>
+            <span id="helptext">Your password must contain at least 8 characters.</span><br>
+            <span id="helptext">Your password can't be a commonly useed password</span><br>
+            <span id="helptext">Your password can't be entirely numeric. </span>
+        </div>
+        <div id="div-pass2">
+            <label for="pass2" id="label-pass2">Password Again:</label><br>
+            <input type="password" name="password2" required id="id_password2">
+        </div>
+        <div id="submit-div">
+            <button type="submit" id="id_submit">Sign Up</button>
+        </div>
+    </div>    
+</form>
+<p id="signup-text"> Already have an account, log in <a href="{% url 'login' %}">here</a></p>
+</div>
+{% endblock %}
+</body>
+</html>

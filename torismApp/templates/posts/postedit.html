@@ -1,0 +1,39 @@
+<html>
+
+{% block content%}
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/post.css' %}">
+</head>
+<body>
+<div id="post-container">
+<h2>Edit Post</h2>
+{% if messages %}
+{% for message in messages %}
+{% if message.tag == "success" %}
+<span id="msg-success" >{{message}}</span>
+{% else %}  
+<span id="msg-error" >{{message}}</span>
+{% endif %}
+{% endfor %}
+{% endif %}
+{{error}}
+<form method="POST">
+    {% csrf_token %}
+    <div id="post-form">
+        {% for field in form %}
+        <div id="div-title">
+            <label for="title" id="label-title">{{field.label_tag}}</label><br>
+            {{field}}
+        </div>
+        {% endfor %}
+        <div id="submit-div">
+            <button type="submit" id="id_submit">Update</button>
+        </div>
+        
+    </div>   
+</form>
+</div>
+{% endblock %}
+</body>
+</html>

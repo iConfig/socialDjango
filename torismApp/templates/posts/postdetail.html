@@ -1,0 +1,75 @@
+<html>
+    {% block content %}
+    {% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <div id="header">
+        {% if user.is_authenticated %}
+        <button id="profile"><a href="{% url 'home' %}"> <b>Home</b></a></button> <button id="profile"><a href="{% url 'profile' %}"> <b>Profile</b></a></button>
+        <h4>Welcome, {{user.username}}</h4>
+        <button id="logout-text"><a href="{% url 'logout' %}">logout</a></button>
+        {% else %}
+       
+        <h4>Hello, visitor</h4>
+        <h3 id="signup-text"><a href="{% url 'signup' %}">SIGN UP</a></h3>
+        <h3 id="login-text"><a href="{% url 'login' %}">LOG IN</a></h3>
+        {% endif %}
+    </div><br>
+    <div id="page-container">
+        <div id="post-container">
+                {% for p in profile %}
+                {% if p.picture %}
+                <div id="user-postdiv"><img src="{{p.picture.url}}"><p id="username">{{post.created_by}}</p></div>
+                {% endif %}
+                {% endfor %}
+                <div id="post-content" style="font-size: 12px;" ><i>{{post.created_date}}</i></div>
+                <div id="post-content"><b>{{post.title}}</b></div>
+                <div id="post-content">{{post.content}}</div>
+                <br><br>
+
+                <form id="likeForm" method="post" action="{% url 'post_likes' %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="post_id" value="{{post.id}}">
+                    {% if request.user not in post.liked.all %}
+                    <button type="submit">like</button>
+                    {% else %}
+                    <button type="submit">unlike</button>
+                    {% endif %}<br>
+                </form>
+                
+                <p id="likeCount"><i>{{post.liked.all.count}} likes</i></p>
+                <br><br><br><br><br>
+                <!-- only owner of post can see the update or delete button -->
+                {% if request.user == post.created_by %} <br>
+                <button id="post_edit"><a href="{% url 'post_update' post.id %}">edit post</a></button>
+                {% endif %} 
+
+                {% if request.user == post.created_by %}
+                <button id="post_delete"><a href="{% url 'post_delete' post.id %}">delete post</a></button><br>
+                {% endif %}
+        </div>
+       
+    </div><br><br>
+    <div id="com">
+        <h3><b><i>comments: </i></b></h3>
+        {% for comment in comments %}
+        <div id="comText">
+        <p><i><b>{{comment.username}}</b></i></p>
+        <p>{{comment.comment}}</p> 
+        </div><br>
+        {% endfor %}
+    </div><br><br>
+    <div id="comment-div">
+        <form id="commentform" method="post" action="{% url 'post_comment' %}">
+            {% csrf_token %}
+            <input type="hidden" name="post_id" value="{{post.id}}">
+            <textarea id="id_comment" name="comment" value="say something ..."></textarea>
+            <button type="submit" id="submit"><b>comment</b></button>
+
+        </form>
+    </div>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+
+{% block content%}
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/post.css' %}">
+</head>
+<body>
+    <div id="header">
+        {% if user.is_authenticated %}
+        <button id="profile"><a href="{% url 'home' %}"> <b>Home</b></a></button> <button id="profile"><a href="{% url 'profile' %}"> <b>Profile</b></a></button>
+        <h4>Welcome, {{user.username}}</h4>
+        <button id="logout-text"><a href="{% url 'logout' %}">Logout</a></button>
+        {% else %}
+       
+        <h4>Hello, visitor</h4>
+        <h4 id="signup-text"><a href="{% url 'register' %}">SIGN UP</a></h4>
+        <h4 id="login-text"><a href="{% url 'login' %}">LOG IN</a></h4>
+        {% endif %}
+    </div><br>
+<div id="post-container">
+<h2>Create Post</h2>
+{% if messages %}
+{% for message in messages %}
+{% if message.tag == "success" %}
+<span id="msg-success" >{{message}}</span>
+{% else %}  
+<span id="msg-error" >{{message}}</span>
+{% endif %}
+{% endfor %}
+{% endif %}
+{{error}}
+<form method="POST">
+    {% csrf_token %}
+    <div id="post-form">
+        {{form.non_feild_errors}}
+        <!-- <span id="form-error">{{form.username.errors}}</span> -->
+        <div id="div-title">
+            <label for="title" id="label-title">Title:</label><br>
+            <input type="text" name="title" maxlength="150"  required id="id_title"><br>
+            <!-- <span id="helptext">Required. 25 characters or fewer. Letters, digits and @/./+/-/_ only</span> -->
+        </div>
+        <!-- <span id="form-error">{{form.email.errors}}</span> -->
+        <div id="div-content">
+            <label for="content" id="label-content">Content:</label><br>
+            <textarea name="content" required id="id_content"></textarea><br>
+            <!-- <span id="helptext">Required. Enter a valid Content</span> -->
+        </div>
+        <div id="div-hide">
+            <label for="hide" id="label-hide">Hide:</label>
+            <input type="checkbox" name="hide" id="id_hide">
+        </div>
+        <div id="submit-div">
+            <button type="submit" id="id_submit">Post</button>
+        </div>
+    </div>    
+</form>
+</div>
+{% endblock %}
+</body>
+</html>

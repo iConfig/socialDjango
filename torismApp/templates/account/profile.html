@@ -1,0 +1,63 @@
+
+<html>
+    {% block content %}
+    {% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+</head>
+<body>
+    <div id="header">
+        {% if user.is_authenticated %}
+        <button id="profile"><a href="{% url 'home' %}"> <b>Home</b></a></button>
+        <h4>Welcome, {{user.username}}</h4> 
+        <button id="logout-text"><a href="{% url 'logout' %}">Logout</a></button>
+        {% else %}
+       
+        <h4>Hello, visitor</h4>
+        <h3 id="signup-text"><a href="{% url 'register' %}">SIGN UP</a></h3>
+        <h3 id="login-text"><a href="{% url 'login' %}">LOG IN</a></h3>
+        {% endif %}
+    </div><br>
+    <div id="profile-info">
+        <div id="info" > 
+           
+        {% for p in profile %}
+        {% if p.picture %}
+        <img id="profile-pic" src="{{p.picture.url}}">
+        {% endif %}
+        <div id="user-info">
+        <span><b>FullName: </b> {{p.first_name}}, {{p.last_name}}</span> 
+        <br>
+        <span> <b>Username:</b> {{p.username}}</span> <br>
+        {% if p.email %}
+        <span> <b>Email:</b> {{p.email}}</span> 
+        {% endif %}<br>
+        {% if p.location %}
+        <span> <b>Location: </b>{{p.location}}</span> 
+        {% endif %}<br>
+        {% if p.bio %}
+        <span> <b>Bio:</b> {{p.bio}}</span> 
+        {% endif %}
+        {% endfor %}
+        </div>
+        <br><br>
+        <!-- <p id="edit"><a href="{% url 'edit_profile' %}">Edit Profile</a></p> -->
+        <button id="new-post"><a href="{% url 'edit_profile'  %}" ><b>Edit Profile</b></a></button><br><br>
+        </div> <br><br>
+
+        <div id="page-container">          
+            <div id="post-list">
+                <button id="new-post"><a href="{% url 'post_create'  %}" ><b>New Post</b></a></button><br>
+                <h3>All Posts</h3>
+                {% for p in post %}
+                <span id="title>"><a href="{% url 'post_details' p.id %}">{{p.title}}</a></span><br>
+                {% endfor %}
+            </div>
+           
+            <br>    
+    </div>
+    </div>
+    
+{% endblock %}
+</body>
+</html>
