@@ -16,13 +16,13 @@ A social media app with django
 <p>- <b>REST API</b> that can be used to connect to other apps that wishes to display posts from this app on theirs </p>
 <p>- CRUD via the api is also available </p>
 
-<p><b>Home View</b></p>
+<b>Home View</b>
 ![home](https://user-images.githubusercontent.com/109239573/198752855-9081bdfe-3dd3-4022-a82d-785d802f4465.png)
 
-<p><b>Post Details and comment view</b></p>
+<b>Post Details and comment view</b>
 ![comments](https://user-images.githubusercontent.com/109239573/198752895-12fdf210-26cd-43cf-a9ad-1c10245b3b22.png)
 
-<p><b>Profile View</b></p>
+<b>Profile View</b>
 ![profile](https://user-images.githubusercontent.com/109239573/198752903-f0f41bb7-5042-4a76-ba00-9535e99be7d1.png)
 
 
