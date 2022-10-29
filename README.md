@@ -18,13 +18,10 @@ A social media app with django
 
 <b>Home View</b>
 ![home](https://user-images.githubusercontent.com/109239573/198752855-9081bdfe-3dd3-4022-a82d-785d802f4465.png)
-<br>
 
 <b>Post Details and comment view</b>
 ![comments](https://user-images.githubusercontent.com/109239573/198752895-12fdf210-26cd-43cf-a9ad-1c10245b3b22.png)
 
-
-<br>
 <b>Profile View</b>
 ![profile](https://user-images.githubusercontent.com/109239573/198752903-f0f41bb7-5042-4a76-ba00-9535e99be7d1.png)
 
